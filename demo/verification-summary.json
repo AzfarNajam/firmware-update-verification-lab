@@ -1,0 +1,39 @@
+{
+  "scope": "Host-side MCUboot imgtool verification; synthetic payloads; no bootloader execution",
+  "imgtool_version": "2.5.0",
+  "python_version": "3.14.6",
+  "passed": 5,
+  "total": 5,
+  "cases": [
+    {
+      "name": "valid_signature",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true
+    },
+    {
+      "name": "changed_payload",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true
+    },
+    {
+      "name": "untrusted_signer",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true
+    },
+    {
+      "name": "hash_only_control",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true
+    },
+    {
+      "name": "old_signed_image",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true
+    }
+  ]
+}
